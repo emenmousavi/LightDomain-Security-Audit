@@ -1,0 +1,2 @@
+dns-python==2.1.0
+argparse==1.4.0
