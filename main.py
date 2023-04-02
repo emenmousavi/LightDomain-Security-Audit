@@ -16,7 +16,7 @@ def check_domain_security(domain):
                 spf_found = True
                 break
         if not spf_found:
-            print(f"{domain} does not have an SPF record configured. Visit https://www.spf.org/ to learn how to configure SPF.")
+            print(f"{domain} does not have an SPF record configured. Visit https://easydmarc.com/blog/how-to-create-an-spf-record/ to learn how to configure SPF.")
     except dns.resolver.NXDOMAIN:
         print(f"The domain {domain} does not exist.")
     except dns.resolver.NoAnswer:
@@ -26,7 +26,7 @@ def check_domain_security(domain):
     try:
         dkim_record = resolver.query(f"_adsp._domainkey.{domain}", 'TXT')
         if not dkim_record:
-            print(f"{domain} does not have a DKIM record configured. Visit https://dmarcian.com/setup-dkim/ to learn how to configure DKIM.")
+            print(f"{domain} does not have a DKIM record configured. Visit https://easydmarc.com/blog/dkim-record-how-to-create-add-and-check-dkim-records/ to learn how to configure DKIM.")
     except dns.resolver.NoAnswer:
         print(f"No TXT record found for _adsp._domainkey.{domain}.")
     
@@ -39,7 +39,7 @@ def check_domain_security(domain):
                 dmarc_found = True
                 break
         if not dmarc_found:
-            print(f"{domain} does not have a DMARC record configured. Visit https://dmarc.org/wiki/FAQ/General#How_do_I_create_a_DMARC_record_to_get_reports.3F to learn how to configure DMARC.")
+            print(f"{domain} does not have a DMARC record configured. Visit https://easydmarc.com/blog/dmarc-step-by-step-guide/ to learn how to configure DMARC.")
     except dns.resolver.NoAnswer:
         print(f"No TXT record found for _dmarc.{domain}.")
     
