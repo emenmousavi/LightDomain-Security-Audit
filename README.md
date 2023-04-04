@@ -16,7 +16,7 @@ Run the program by executing the `secure-your-domain.py` file, passing the domai
     ```
     
 The program will then check the domain's SPF, DKIM, and DMARC records and display the results.
-![alt text](https://github.com/emenmousavi/LightDomain-Security-Audit/blob/main/screenshot.png)
+![alt text](https://github.com/emenmousavi/LightDomain-Security-Audit/blob/main/sc.png)
 
 ## License
 
